@@ -1,0 +1,221 @@
+body  {margin:0;background-image: url("../images/background1.jpg");background-repeat: repeat;background-color:  #081e31}
+main{margin: 0}
+.frontpage {height: auto;min-height:100vh;margin: 0;background-color:#081e31e6 }
+
+.header    {background-color: none;height:8%;width:100%;margin: 0% 0% 2% 0%;padding: 0% 0 0% 0%;display: inline-block;}
+h1        {font-style:normal;font-weight: 600;font-size: 170%;font-family: "Candara"; color: black;
+          display: inline-block;margin: 0;background-color: #ff6716;padding: 2% 1% 0.5% 1%;
+          border-bottom: groove white 5px;box-shadow:0px 0px 57px 0px black;
+}
+.header-content {margin:0% 8% 0% 8%;}
+header .tabs {text-decoration: none;background-color:;width: 27.5%;text-align: right;float: right;
+              margin: 2.5% 0 0 0; border-bottom: solid #ff6716 1px;}
+header a {text-decoration: none;color: black;font-family: "Century Gothic";
+          margin: 0 1% 0 1%;font-size: 96%;color: white;
+        }
+header .mobnavcontainer{display: none;margin:0;padding: 0;}
+header .navtabmobile{display: none}
+header .menuicon{display: none;padding: 0;margin: 0;
+position: absolute;top:2.5%;right:2%;width: 10%;}
+header .menuicon img{width:40%}
+.covercarousel  {display: inline-block;width: 55%;margin:0% 0% 0% 8%;}
+
+.covercaption   {display: inline-block;width:80%;float: none;padding-top:2%;margin: 5% 0 5% 0}
+
+.covercaption a{font-family:"Tempus Sans ITC";font-size: 335%;color: white;margin: 0;
+                text-shadow:0px 1px 11px black;text-decoration: none;}
+.covercaption p{color:white;font-family: "Candara";margin:.5% 0 .5% 0;font-size: 125%;
+                text-shadow: 0px 1px 15px black;
+                }
+
+
+}
+.covercaption a:hover {color:grey}
+.covercaption a:focus{color:grey}
+
+.todaysspecial  {display: inline-block;width:23%;text-align: center;
+                  float: right;margin-right:8%;border-radius: 1%;
+                padding: 0% 0% 0% 0%);background-color: #ff6716;box-shadow:0px 1px 28px 0px black}
+.todaysspecial h4{font-family: "Century Gothic";margin: 3%;color:#1a262f;
+                  text-shadow: 0px 0px 1px #203445;border-top: solid;border-bottom: solid;border-color: #203445;border-width: thin;}
+.todaysspecial img{width:70%;height:90%;display: inline-block;}
+.todaysspecial .spdishmobcontainer{display: none}
+.specialdishmobile{display: none;width:45%;}
+.specialdish    {display: inline-block;width:45%;background-color: white;
+                padding:1% 0 0 0;margin: .5% 1% 2% 1%;animation: fadeEffect .5s;}
+                @keyframes fadeEffect {
+                  from{opacity:0.5}to{opacity: 1}
+                  }
+.specialdish p{font-family: "candara light";}
+
+
+.frontpageoptions{width:100%;background-color:#14171bb3;margin:2% 0% 0 -18%;
+                  border-right: groove none 5px;padding: 0% 0% 0% 18%;
+                  box-shadow:0px 0px 2px 0px #a29790;
+                  }
+.frontpageoptions div{display: inline-block;width:30%;text-align: center;
+                    margin: 3% 0 2% 0;font-family:"candara light";color: white;
+                  }
+.frontpageoptions div img{width:20%;border-radius: 100%;}
+.frontpageoptions div:hover p{text-shadow: 0px 1px 5px white;}
+.frontpageoptions .personalize:hover img{box-shadow: 0px 1px 10px 0px #fc1a40;}
+.frontpageoptions .locations:hover img{box-shadow: 0px 1px 10px 0px #e40027;}
+.frontpageoptions .orderstatus:hover img{box-shadow: 0px 1px 10px 0px #3bb54a;}
+.frontpageoptiondetails {display: none;display:;width:100%;z-index: 9;margin:0 0 0 -8%;
+                         position:fixed;top:0;height: 100vh;background-color: #081d35c4;}
+.closedetails       img    {display: inline-block;width:2%;background:#fd8512;border-radius: 50%;
+                            position: absolute;top:12%;right:25%;box-shadow: 0 0 3px 0px black}
+.optiondetail {background-color: #fd8512;width:50%;margin: 0 25% 0 25%;display: none;
+               border:white solid 5px;position: absolute;top:20%;0px 0px 20px 0px black
+                    }
+.optiondetail h4{font-family: candara;font-size: 120%;text-align: center;margin: 1% 0 1% 0;padding:0;}
+.personalizedetails .buttoncontainer{display: inline-block;width:100%;margin:3% 0% 3% 0%;padding:0 0 0 0;text-align: center;}
+.owndesignbutton   {background-color: #0c72a2;border: none;padding:2%;box-shadow: 0 0 3px 0 black}
+.ourdesignbutton   {background-color: #fd2b2b;border: none;padding:2%;box-shadow: 0 0 3px 0 black}
+.orderstatusdetails form{display: inline-block;width:100%;margin: 1% 2% 1% 2%;text-align: center;}
+.orderstatusdetails form input{display: inline-block;width:60%;margin: 0.5% 0 0 .5%;
+                      background-color: white;border:none;line-height: 22px;}
+.orderstatusdetails .buttoncontainer{display: inline-block;width:60%;margin:0 0% 0 23%;padding:0 0 0 0}
+.orderstatusdetails .cancelbutton{background-color: #ff0000;border: none;color:white;display: inline-block;box-shadow: 0 0 2px 0 black;
+                    padding:2% 2% 2% 2%;border-radius: 2%;margin:5% 2% 2% 0;float: right;font-weight: bold;font-family: arial;
+                          }
+.orderstatusdetails .checkstatusbutton{background-color: green;border: none;color:White;display: inline-block;box-shadow: 0 0 2px 0 black;
+                    padding:2% 2% 2% 2%;border-radius: 0%;margin:5% 2% 2% 0;float: right;font-weight: bold;font-family: arial;
+
+                  }
+.cancelbutton:hover{background-color: #bb0707}
+.checkstatusbutton:hover{background-color: #006900}
+
+.secondpage           {background-color: #081e31e6;margin: 0;padding: 0 0 1% 0}
+.productsection{background-color: orange;margin:0 8% 0 8%;border:solid white 6px;box-shadow:0px 0px 45px 0px black}
+h2      {text-align: center;display: inline-block;width: 100%;float: none;color: white;
+        font-family: "Century Gothic";font-style: normal;font-weight: 50;font-size: 170%;
+        text-shadow: 0px 2px 2px #081e31e6;
+      }
+.productselector     {display: block;background-color: none;text-align: center;padding: .5% 0 .5% 0;}
+.tab {display:inline-block;width: 25%;color: white ; font-family: "Corbel";
+                      font-size: 110%;padding:1% 0 0 0;text-shadow: 0px 1px 2px #081e31e6;
+                      border-top: solid;border-color: #14171b00;transition: border-color 0.2s;border-width: 1px}
+.tab div{display: block;text-align: center;}
+.selectoricon {width:14%;box-shadow: 0px 0px 5px 0px red;background-color: #ff7c36;border-radius: 50%;transition: background-color 0.3s;}
+.tab:hover .selectoricon{text-shadow: 0px 1px 2px none; box-shadow: 0px 0px 5px 0px #012e54;background-color: #ad9690}
+.tab:focus{border-top: solid red 1px;text-shadow: 0px 0px 2px red; box-shadow: 0px 0px 0px 0px red;}
+
+.productdisplayarea{display: block;margin:0 0 2% 0;padding:0 2% 0 2%}
+.productdisplay   {width:100%;display: inline-block;margin: 3% 0% 1% 0%;text-align: center;float: left;
+
+                  }
+.product          {display: inline-block; width: 200px;height:;margin:.5% .4% 1% .4%;padding: .5%;;
+                   box-shadow: 0px 2px 4px 0px #1d303f;border-radius: 0%;background-color: #ffe9c2;}
+.product:hover    {box-shadow: 0px 0.5px 2px 0px  #750000}
+.productimage      {display: inline-block;width: 100%;height:132px}
+.productimage img{width: 100%;height: 135px;object-fit: cover;}
+.productinfo      {display: inline-block;width: 100%;text-align: left;margin: 1% 1.5% 1% 1.5%;
+                  padding:}
+.productname      {display: block;color: black;font-family: "Candara Light";
+                  font-weight:600;height:25px;font-size: 110%;padding: 0;margin: 0 0 1% 0}
+.productdesc      {display: block;color: black;font-family: "arial";height: 55px;
+                  font-weight:100;font-size: 80%;padding: 0;margin: 2% 0 2% 0}
+.pricebuylike     {display: block;height:40px;padding: 0;margin: 0% 0 0% 0}
+.productprice     {display:inline-block;color: black;font-family: "Candara";
+                  font-weight:bold;font-size: 100%;width:40%;}
+.cartlike         {display: inline-block;width:50%;margin:0 0% 0 0%;padding:0% 0 0 0;box-shadow: 0 0 0px 0px black}
+.cartlike img{width:20%;display: none;float: right;margin:0 2% 0 2%;}
+.product:hover .cartlike img{display: inline-block;}
+.product button{display: none;visibility: hidden;width:45%;font-size: 70%;border:none;background-color: white;font-size: 100%}
+.product:hover button{visibility: visible;}
+.slidechanger {display:block;margin: 5% 0 3% 0;padding:1% 0 0 0;text-align: center;clear: both;}
+.slidechanger div{display: inline-block;border:none;float: none;}
+.pagenolist {display: inline-block;width:30%;margin:0 0 0 0;padding: 0;text-align: center;}
+.pagenolist ul{display: block;margin:0;padding:0}
+.pagenumber  {display: inline-block;background-color: #192936; padding:1% 1.5% 1% 1.5%;
+            box-shadow: 0px 0px 0px 0px black;margin:1%;
+            border-radius: 10%;font-family: "Century Gothic";color: white;font-weight: bold;}
+.pagenumber a{text-decoration: none;color:white}
+.arrow      {width:3%;min-width: 30px;display: inline-block;float: left;}
+.arrow img  {width: 50%;min-width: 10px;margin: 1% .5% 1% .5%;padding:20% 0% 20% 0%}
+.arrow button{border:none;box-shadow: 0px 0px 6px 0px #03080c;border-radius: 50%;}
+hr.footerhr    {margin: 8% 8% 0 8%; width: 84%;color: orange;border: .5px solid #8b9196}
+footer {display: block;margin: 1% 0 0 0;padding: 0 0 0% 0;background-color: none #ff6716}
+.footercontainer{margin:1% 8% 0 8%;display: block;}
+.footercontainer h5{display: inline-block;font-weight: 600;font-size: 170%;font-family: "Candara";
+                    margin: 2% 0 0 0;padding:0;color:white;background-color: #ff6716;padding: 2% 1% 0.5% 1%;
+                    border-bottom: groove white 5px;box-shadow:0px 5px 11px 0px black}
+.footerlinks{display: inline-block;width:100%}
+ .footerdiv{display: inline-block;width: 24.5%;margin:3% 0 0 0;float: left;}
+.footerdiv    a{display: block;text-decoration: none;color:#c2cdd8;font-family: "Candara";
+                margin:.5% 0 0.5% 0;
+}
+.footerdiv a:hover ,a:focus{color:white}
+
+.followbuttons h6{display: inline-block;width:100%;color:#c2cdd8;font-family: "Candara";font-size: 100%;margin:0 0% 5% 0;text-align: left;}
+.followbuttons .icon{display: inline-block;text-decoration: none;margin:0 1.5% 2% 1.5%}
+.ig a,.wa a,.yt a,.fb a {color:#a8a9ab;transition: color .15s}
+.ig a:hover        {color:#8a3ab9;}
+.wa a:hover       {color:	#4FCE5D;}
+.yt a:hover       {color:#f70000;}
+.fb a:hover       {color:#4267b2;}
+.ig a:focus       {color:#4c68d7;}
+.wa a:focus       {color:#00a7e7;}
+.yt a:focus       {color:#f70000;}
+.fb a:focus       {color:#4267b2;}
+.copyright{clear: both;display: block;color: #c2cdd8;margin: 3% 0 0 0;padding:.5% 0 0 0;
+      font-family: "Century Gothic";font-size: 75%;border-top:solid #8b9196 .3px}
+
+@media only screen and (max-width:768px){
+  .frontpage {margin-bottom: -1%;background-color:#081e31e6;padding-bottom: 2%;height: auto;}
+  .header-content {margin:0% 0% 0% 0%;}
+  .header h1{margin:0 0 0 8%}
+  header .tabs {display: none;}
+  header    {margin:0 0 4% 0}
+  header a {text-decoration: none;color: black;font-family: "Century Gothic";
+            margin: 0 1% 0 1%;padding: 2% 2% 2% 0;font-size: 96%;color: white;display: block;
+            border-bottom: solid white .5px;
+          }
+  header .mobnavcontainer{display: inline-block;}
+  header .navtabmobile{display: none;text-decoration: none;background-color:#ff6716;width: 27.5%;text-align: right;
+                float: right;position: fixed;top:0%;right:0%;
+                margin: 2.5% 0 0 0;padding: 2%;border-bottom: solid #ff67169c 1px;animation:fadeEffect .05s
+              }
+  @keyframes fadeEffect {
+    from{opacity:0}to{opacity: 1}
+    }
+
+  header .navtabmobile .closeicon{display: inline-block;width:10%;text-align: left;}
+  header .navtabmobile .closeicon img{size:2%:}
+  header .menuicon{display: inline-block;padding: 0;margin: 0;
+    position: absolute;top:2.5%;right:0%;width: 10%;}
+  header .menuicon img{width:60%;box-shadow: 0px 1px 13px 0px black;border-radius: 50%;}
+  header .menuicon .baricon{display: block;}
+  .covercarousel{width:100%;margin:0}
+  .covercaption   {display: inline-block;width:80%;float: none;padding-top:2%;margin:8% 0 7% 8%; }
+  .covercaption a{font-family:"Tempus Sans ITC"font-size: 310%;color: white;margin: 0;text-decoration: none;}
+  .covercaption p{color:white;font-family: "Candara";margin:0;font-size: 115%}
+  .frontpage    {height:none}
+  .frontpageoptions{width:100%;margin:5% 0% 5% 0%;
+                    padding: 0% 0% 0% 0%;border:none;
+                    }
+  .frontpageoptions div{display: inline-block;width:32%;text-align: center;
+                      margin: 3% 0 1% 0;font-family:"candara light";color: white;
+                    }
+  .todaysspecial  {display: inline-block;width:100%;text-align: center;
+                    float: right;margin:5% 0 5% 0;border-top: groove white 5px;;
+                  padding: 0% 0% 0% 0%);background-color: #ff6716; }
+  .todaysspecial h4{margin: 3%}
+  .todaysspecial img{width:45%;display: inline-block;}
+  .spdishpccontainer{display: none;}
+  .todaysspecial .spdishmobcontainer{display: inline-block;}
+  .specialdishmobile{width:45%;display: inline-block;background-color: white;
+                  padding:1% 0 0 0;margin: .5% 1% 2% 1%;clear: both;animation:fadeEffect 0.5s  }
+      @keyframes fadeEffect {
+        from{opacity:0.5}to{opacity: 1}
+        }
+  .secondpage{padding:40% 0 0 0}
+  .productsection{background-color: orange;margin:20% 8% 0 8%;border:solid white 6px}
+ .selectoricon {width:17%}
+  .footerdiv{display: inline-block;width: 30%;margin:3% 0 0 0;float: left;}
+  .followbuttons{display: inline-block;width:100%;margin:3.5% 0 0 0}
+  .followbuttons h6{margin:0 0 1.5% 0}
+  .footercontainer h5{font-size: 120%}
+  .copyright{font-size: 62%;padding:0 0 1% 0 }
+  }

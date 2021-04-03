@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://kit.fontawesome.com/d2cf0ef0bc.js" crossorigin="anonymous"></script>
+    <title>Order Now</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="javascript" href="bootstrap/js/bootstrap.min.js">
+    <script type="text/javascript">
+    var specialPcS1=0;
+    var specialPcS2=1;
+    var specialPcS3=2;
+    var specialPcS4=3;
+    function specialPcShow(){
+      var i;
+      var slides=document.getElementsByClassName("specialdish");
+      for(i=0;i<slides.length;i++){
+        slides[i].style.display="none"
+      }
+      if(specialPcS1>=slides.length){specialPcS1=0}
+      if(specialPcS2>=slides.length){specialPcS2=1}
+      if(specialPcS3>=slides.length){specialPcS3=2}
+      if(specialPcS4>=slides.length){specialPcS4=3}
+      slides[specialPcS1].style.display="inline-block";
+      slides[specialPcS2].style.display="inline-block";
+      slides[specialPcS3].style.display="inline-block";
+      slides[specialPcS4].style.display="inline-block";
+      specialPcS1+=4; specialPcS2+=4; specialPcS3+=4; specialPcS4+=4;
+      setTimeout(specialPcShow,5000)
+    }
+    var specialMobS1=0;
+    var specialMobS2=1;
+    function specialMobileShow() {
+      var i;
+      var slides = document.getElementsByClassName("specialdishmobile");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";}
+        if (specialMobS1 >=slides.length) {specialMobS1 = 0}
+        if (specialMobS2 >=slides.length) {specialMobS2 = 1}
+        slides[specialMobS1].style.display = "inline-block";
+        slides[specialMobS2].style.display = "inline-block";
+        specialMobS1+=2;
+        specialMobS2+=2;
+        setTimeout(specialMobileShow, 5000);
+      }
+      function openNav(){
+        var openelement=document.getElementsByClassName("navtabmobile");
+        openelement[0].style.display="inline-block";
+        openelement[0].style.animation="fadeEffect 1s"
+        var menuicon=document.getElementsByClassName("baricon");
+        menuicon[0].style.display="none"
+      }
+
+      function closeNav(){
+        var closeelement=document.getElementsByClassName("navtabmobile");
+        closeelement[0].style.display="none";
+        closeelement[0].style.animation="fadeEffect 1s"
+        var menuicon=document.getElementsByClassName("baricon");
+        menuicon[0].style.display="inline-block"
+      }
+      function openDetail(index){
+        var openelement=document.getElementsByClassName("frontpageoptiondetails");
+        openelement[0].style.display="inline-block";
+        var x=document.getElementsByClassName("optiondetail");
+        x[index].style.display="inline-block";
+      }
+      function closeDetails(){
+        var closeelement=document.getElementsByClassName("frontpageoptiondetails");
+        closeelement[0].style.display="none";
+        closeelement[0].style.animation="fadeEffect 1s";
+        var x=document.getElementsByClassName("optiondetail");
+        for(i=0;i<x.length;i++){
+          x[i].style.display="none";
+        }
+
+      }
+
+      var currentpage=-1;
+      function productpage(dir){
+        currentpage+=dir;
+        var productpages=document.getElementsByClassName("productdisplay");
+        var pagenumberlist=document.getElementsByClassName("pagenumber");
+        for(i=0;i<productpages.length;i++){
+          productpages[i].style.display="none";
+          pagenumberlist[i].style.backgroundColor="orange";
+        }
+        if(currentpage>=productpages.length){
+          currentpage=0;
+        }
+        if(currentpage<0){
+          currentpage=productpages.length-1;
+        }
+        productpages[currentpage].style.display="inline-block";
+        pagenumberlist[currentpage].style.backgroundColor="#192936";
+
+      }
+      function goToThisProduct(pageno){
+        currentpage=pageno;
+        productpage(0);
+      }
+      </script>
+  </head>
+  <body onload="specialMobileShow(), specialPcShow(),productpage(1)">
+
+    <div class="frontpage">
+    <header>
+      <div class="header">
+      <div class="header-content">
+        <h1>Order Now!</h1>
+        <div class="tabs">
+
+          <a href="#">Contact</a>
+          <a href="#">About</a>
+          <a href="#">Help</a>
+          <a href="#">Login</a>
+        </div>
+        <div class="mobnavcontainer">
+        <div class="navtabmobile">
+          <img src="icons/close1.png" class="closeicon" onclick="closeNav()" alt="Close">
+          <a href="#">Contact</a>
+          <a href="#">About</a>
+          <a href="#">Help</a>
+          <a href="#">Login</a>
+        </div>
+      </div>
+        <div class="menuicon" >
+          <img class="baricon" src="icons/menu.png" onclick="openNav()" alt="Nav">
+      </div>
+    </div>
+  </div>
+    </header>
+    <main>
+        <div class="covercarousel">
+
+            <div class="covercaption">
+              <p>We make and deliver you the best of</p>
+              <a href="#ourproducts" onclick="goToThisProduct(0)">Cakes. </a>
+              <a href="#ourproducts" onclick="goToThisProduct(1)">Pastries. </a>
+              <a href="#ourproducts" onclick="goToThisProduct(2)">Snackes. </a>
+              <p>Order Now!</p>
+              </div>
+
+            <div class="frontpageoptions">
+              <div class="personalize" onclick="openDetail(0)">
+                <img src="icons/gift-box.png" alt="">
+                <p>Personalize Cake</p>
+              </div>
+              <div class="locations" onclick="openDetail(1)">
+                <img src="icons/placeholder.png" alt="">
+                <p>Available Locations</p>
+              </div>
+              <div class="orderstatus" onclick="openDetail(2)">
+                <img src="icons/check.png" alt="Order Status">
+                <p>Order Status</p>
+              </div>
+            </div>
+            <div class="frontpageoptiondetails">
+              <div class="closedetails">
+                <img src="icons/close3.png" class="closeicon" onclick="closeDetails()" alt="Close">
+              </div>
+              <div class="personalizedetails optiondetail">
+                <h4>Personolize</h4>
+                <form class="" action="index.html" method="post">
+                  <div class="buttoncontainer">
+                    <button class="owndesignbutton" type="button" name="button">Design Your Own</button>
+                    <button class="ourdesignbutton" type="button" name="button">Choose from our Designs</button>
+                  </div>
+                </form>
+              </div>
+              <div class="locationdetails optiondetail">
+                <h4>Locations</h4>
+                <form class="" action="index.html" method="post">
+                  <ul class="locationlist">
+                    <li>Street 1</li>
+                    <li>Street 2</li>
+                    <li>Street 3</li>
+                    <li>Street 4</li>
+                    <li>Street 5</li>
+                    <li>Street 6</li>
+                  </ul>
+                </form>
+              </div>
+              <div class="orderstatusdetails optiondetail">
+                <h4>Order Status</h4>
+                <form class="" action="index.html" method="post">
+                  <label for="orderno"><input name="orderno" type="text" placeholder="Order Number" required></input></label>
+                  <label for="mobileno"><input name="mobileno" type="tel" placeholder="Mobile Number" required></input></label>
+                </form>
+                <div class="buttoncontainer">
+                  <button class="checkstatusbutton" type="button" name="button">Check Status</button>
+                  <button class="cancelbutton" type="button" name="button">Cancel Order</button>
+                </div>
+                </div>
+            </div>
+          </div>
+          <div class="todaysspecial">
+            <h4>Today's Special</h4>
+            <div class="spdishpccontainer">
+
+            <div class="specialdish">
+                <img src="images/brownies-22.jpg" alt="">
+                <p>Special dish 1 a</p>
+            </div>
+
+            <div class="specialdish">
+                <img src="images/caramel custard.jfif" alt="">
+                <p>Special dish 2 a</p>
+            </div>
+
+            <div class="specialdish">
+                <img src="images/chocolate-cake-3.jpg" alt="">
+                <p>Special dish 3 a</p>
+            </div>
+
+            <div class="specialdish">
+                <img src="images/cutlet.jpg" alt="">
+                <p>Special dish 4 a</p>
+            </div><div class="specialdish">
+                <img src="images/oatmeal-cookies-1.jpg" alt="">
+                <p>Special dish 1 b</p>
+            </div>
+
+            <div class="specialdish">
+                <img src="images/waffle.jpg" alt="">
+                <p>Special dish 2 b</p>
+            </div>
+
+            <div class="specialdish">
+                <img src="images/redvelvet.jpg" alt="">
+                <p>Special dish 3 b</p>
+            </div>
+
+            <div class="specialdish">
+                <img src="images/american-flag-pie.jpg" alt="">
+                <p>Special dish 4 b</p>
+            </div>
+            </div>
+                  <div class="spdishmobcontainer">
+
+                  <div class="specialdishmobile">
+                      <img src="images/fp3.jpg" alt="">
+                      <p>Special dish 1 a</p>
+                  </div>
+                  <div class="specialdishmobile">
+                      <img src="images/fp4.png" alt="">
+                      <p>Special dish 2 a</p>
+                  </div>
+                  <div class="specialdishmobile">
+                      <img src="images/fp5.png" alt="">
+                      <p>Special dish 1 b</p>
+                  </div>
+                  <div class="specialdishmobile">
+                      <img src="images/fp6.png" alt="">
+                      <p>Special dish 2 b</p>
+                  </div>
+                  </div>
+
+            </div>
+    </div> <!--frontpageend-->
+
+<div class="secondpage">
+<div class="productsection">
+
+<h2 id="ourproducts">Our Products</h2>
+<div class="productselector">
+  <div class="tab" onclick="goToThisProduct(0)">
+    <div><img class="selectoricon" src="icons/cake.png" alt="Cakes" ></div>
+    <div>Cakes</div>
+  </div>
+  <div class="tab" onclick="goToThisProduct(1)">
+    <div><img class="selectoricon" src="icons/donut.png" alt="Pastries"></div><div>Pastries</div>
+  </div>
+  <div class="tab" onclick="goToThisProduct(2)">
+    <div><img class="selectoricon" src="icons/burger.png" alt="Snacks" ></div><div>Snackes</div>
+ </div>
+</div>
+ <div class="productdisplayarea">
+  <div  class="productdisplay productcake"><!--Product Display page 1 Cake-->
+   <div class="product">
+     <div class="productimage">
+       <img src="images/cakes/chocolate-birthday-cake.jpeg" alt="product1">
+      </div>
+      <div class="productinfo">
+        <p class="productname">Chocolate Birthday Cake</p>
+        <p class="productdesc"> A moist and tasty chocolate birthday cake </p>
+        <div class="pricebuylike">
+          <p class="productprice">Rs. 350/kg</p>
+          <div class="cartlike">
+            <img class="carticon" src="icons/shopping-cart.png" alt="">
+            <img class="likeicon"src="icons/heart.png" alt="">
+          </div>
+        </div>
+      </div>
+   </div>
+   <div class="product">
+     <div class="productimage">
+       <img src="images/cakes/chocolate-mud-cake.jpeg" alt="Chocolate Mud Cake">
+      </div>
+      <div class="productinfo">
+        <p class="productname">Chocolate Mud Cake</p>
+        <p class="productdesc">The ultimate mud cake – it’s rich, dense and oh so chocolatey.</p>
+        <div class="pricebuylike">
+          <p class="productprice">Rs. 350/kg</p>
+          <div class="cartlike">
+            <img class="carticon" src="icons/shopping-cart.png" alt="">
+            <img class="likeicon"src="icons/heart.png" alt="">
+          </div>
+        </div>
+        <button type="button" name="Order">Order Now!</button>
+      </div>
+   </div>
+   <div class="product">
+     <div class="productimage">
+       <img src="images\cakes\flourless orange.jpeg" alt="Flourless Orange Cake">
+      </div>
+      <div class="productinfo">
+        <p class="productname">Flourless Orange Cake</p>
+        <p class="productdesc">Gluten free cake for morning tea.</p>
+        <div class="pricebuylike">
+          <p class="productprice">Rs. 350/kg</p>
+          <div class="cartlike">
+            <img class="carticon" src="icons/shopping-cart.png" alt="">
+            <img class="likeicon"src="icons/heart.png" alt="">
+          </div>
+        </div>
+      </div>
+   </div>
+   <div class="product">
+     <div class="productimage">
+       <img src="images/cakes/red-velvet-cupcakes.jpeg" alt="Red velvet cup Cake">
+      </div>
+      <div class="productinfo">
+        <p class="productname">Red Velvet Cup Cake</p>
+        <p class="productdesc">A little or a lot in the soft, velvety texture of these heavenly red velvet cupcakes.</p>
+        <div class="pricebuylike">
+          <p class="productprice">Rs. 400/kg</p>
+          <div class="cartlike">
+            <img class="carticon" src="icons/shopping-cart.png" alt="">
+            <img class="likeicon"src="icons/heart.png" alt="">
+          </div>
+        </div>
+        <button type="button" name="Order">Order Now!</button>
+      </div>
+   </div>
+   <div class="product">
+     <div class="productimage">
+       <img src="images/cakes/vanilla-cupcakes.jpeg" alt="Vanilla Cup Cake">
+      </div>
+      <div class="productinfo">
+        <p class="productname">Vanilla Cup Cake</p>
+        <p class="productdesc">These festive cakes are gluten, dairy, egg and nut free, and are great for kids’ parties or a special treat.</p>
+        <div class="pricebuylike">
+          <p class="productprice">Rs. 320/kg</p>
+          <div class="cartlike">
+            <img class="carticon" src="icons/shopping-cart.png" alt="">
+            <img class="likeicon"src="icons/heart.png" alt="">
+          </div>
+        </div>
+        <button type="button" name="Order">Order Now!</button>
+      </div>
+   </div>
+ </div>
+ <div  class="productdisplay productcake"><!--Product Display page 2 Desserts-->
+  <div class="product">
+    <div class="productimage">
+      <img src="images/pastries/Baklava.jpg" alt="product1">
+     </div>
+     <div class="productinfo">
+       <p class="productname">Baklava 1</p>
+       <p class="productdesc">Flaky-buttery phyllo pastry filled with a rich filling of pistachio nuts,from Turkey</p>
+       <div class="pricebuylike">
+         <p class="productprice">Rs. 600/kg</p>
+         <div class="cartlike">
+           <img class="carticon" src="icons/shopping-cart.png" alt="">
+           <img class="likeicon"src="icons/heart.png" alt="">
+         </div>
+       </div>
+     </div>
+  </div>
+  <div class="product">
+    <div class="productimage">
+      <img src="images/pastries/Cookies.jpg" alt="product1">
+     </div>
+     <div class="productinfo">
+       <p class="productname">Cookies</p>
+       <p class="productdesc">Cookies from The United States of America</p>
+       <div class="pricebuylike">
+         <p class="productprice">Rs. 300/kg</p>
+         <div class="cartlike">
+           <img class="carticon" src="icons/shopping-cart.png" alt="">
+           <img class="likeicon"src="icons/heart.png" alt="">
+         </div>
+       </div>
+     </div>
+  </div>
+  <div class="product">
+    <div class="productimage">
+      <img src="images/pastries/doughnuts.jpg" alt="product1">
+     </div>
+     <div class="productinfo">
+       <p class="productname">Doughnut</p>
+       <p class="productdesc"> Doughnuts come with lots of sprinkles on top.</p>
+       <div class="pricebuylike">
+         <p class="productprice">Rs. 500/kg</p>
+         <div class="cartlike">
+           <img class="carticon" src="icons/shopping-cart.png" alt="">
+           <img class="likeicon"src="icons/heart.png" alt="">
+         </div>
+       </div>
+     </div>
+  </div>
+  <div class="product">
+    <div class="productimage">
+      <img src="images/pastries/Macaron.jpg" alt="product1">
+     </div>
+     <div class="productinfo">
+       <p class="productname">Macaron</p>
+       <p class="productdesc">The tiny cookies made of almond flour and filled with ganache,originated in France.</p>
+       <div class="pricebuylike">
+         <p class="productprice">Rs. 450/kg</p>
+         <div class="cartlike">
+           <img class="carticon" src="icons/shopping-cart.png" alt="">
+           <img class="likeicon"src="icons/heart.png" alt="">
+         </div>
+       </div>
+     </div>
+  </div>
+  <div class="product">
+    <div class="productimage">
+      <img src="images/pastries/Sticky-Pudding-BBC.jpg" alt="product1">
+     </div>
+     <div class="productinfo">
+       <p class="productname">Date Pudding</p>
+       <p class="productdesc">Date pudding with drizzle sticky Tofee over it.</p>
+       <div class="pricebuylike">
+         <p class="productprice">Rs. 520/kg</p>
+         <div class="cartlike">
+           <img class="carticon" src="icons/shopping-cart.png" alt="">
+           <img class="likeicon"src="icons/heart.png" alt="">
+         </div>
+       </div>
+     </div>
+  </div>
+</div>
+<div  class="productdisplay productsnack"><!--Product Display page 3 snacks-->
+
+ <div class="product">
+   <div class="productimage">
+     <img src="images/snacks/chickensamosa.jpg" alt="product1">
+    </div>
+    <div class="productinfo">
+      <p class="productname">Chicken Samosa</p>
+      <p class="productdesc">Samosa with chicken,cheese,onion fillings</p>
+      <div class="pricebuylike">
+        <p class="productprice">Rs. 13/Piece</p>
+        <div class="cartlike">
+          <img class="carticon" src="icons/shopping-cart.png" alt="">
+          <img class="likeicon"src="icons/heart.png" alt="">
+        </div>
+      </div>
+    </div>
+ </div>
+ <div class="product">
+   <div class="productimage">
+     <img src="images/snacks/veg-samosa.png" alt="product1">
+    </div>
+    <div class="productinfo">
+      <p class="productname">Veg Samosa</p>
+      <p class="productdesc">Pure veg samosa with yummy fillings</p>
+      <div class="pricebuylike">
+        <p class="productprice">Rs. 10/Piece</p>
+        <div class="cartlike">
+          <img class="carticon" src="icons/shopping-cart.png" alt="">
+          <img class="likeicon"src="icons/heart.png" alt="">
+        </div>
+      </div>
+    </div>
+ </div>
+ <div class="product">
+   <div class="productimage">
+     <img src="images/snacks/unnakaya.jpg" alt="product1">
+    </div>
+    <div class="productinfo">
+      <p class="productname">Unnakaya</p>
+      <p class="productdesc">A fried snack with coconut and sugar filling with boiled banana anad maida covering</p>
+      <div class="pricebuylike">
+        <p class="productprice">Rs. 15/piece</p>
+        <div class="cartlike">
+          <img class="carticon" src="icons/shopping-cart.png" alt="">
+          <img class="likeicon"src="icons/heart.png" alt="">
+        </div>
+      </div>
+    </div>
+ </div>
+</div>
+</div>
+ <div class="slidechanger">
+   <div class="arrow leftarrow" onclick="productpage(-1)">
+   <button type="button" name="prevslide"><img src="icons/left-arrow.png" alt="left"></button>
+   </div>
+   <div class="pagenolist">
+     <ul>
+       <li class="pagenumber" onclick="goToThisProduct(0)"><a href="#ourproducts">1</a></li>
+       <li class="pagenumber" onclick="goToThisProduct(1)"><a href="#ourproducts">2</a></li>
+       <li class="pagenumber" onclick="goToThisProduct(2)"><a href="#ourproducts">3</a></li>
+     </ul>
+   </div>
+   <div class="arrow rightarrow" onclick="productpage(1)">
+     <button type="button" name="button"><img src="icons/right-arrow.png" alt="left"></button>
+   </div>
+  </div>
+ </div>
+ <hr class="footerhr">
+ <footer>
+   <div class="footercontainer">
+     <h5>Order Now!</h5><br>
+     <div class="footerlinks">
+     <div class="footerdiv">
+       <a href="#">Login</a>
+       <a href="#">About Us</a>
+       <a href="#">Contacts</a>
+       <a href="#">Help</a>
+
+     </div>
+     <div class="footerdiv">
+       <a href="#">Recipe</a>
+       <a href="#">Community</a>
+       <a href="#">Blog</a>
+       <a href="#">Courses</a>
+       <a href="#">Collaborations</a>
+     </div>
+     <div class="footerdiv">
+       <a href="#">Terms</a>
+       <a href="#">Privacy Policy</a>
+       <a href="#"></a>
+       <a href="#"></a>
+     </div>
+     <div class="footerdiv followbuttons">
+       <h6>Social Links</h6>
+       <div class="fb icon"><a href="https://facebook.com" target="_blank" aria-label="Facebook"><abbr title="Facebook"><i class="fab fa-facebook-square fa-2x"></i></abbr> </a></div>
+       <div class="ig icon"><a href="https://instagram.com" target="_blank" aria-label="Instagram"><abbr title="Instagram"><i class="fab fa-instagram fa-2x"></i></abbr></a></div>
+       <div class="wa icon"><a href="https://twitter.com" target="_blank" aria-label="Twitter"><abbr title="Twitter"><i class="fab fa-whatsapp fa-2x"></i></abbr></a></div>
+       <div class="yt icon"><a href="https://youtube.com" target="_blank" aria-label="Youtube"><abbr title="Youtube"><i class="fab fa-youtube fa-2x"></i></abbr></a></div>
+     </div>
+   </div>
+     <div class="copyright">
+       © - 2021 Order Now!™.
+     </div>
+
+   </div>
+ </footer>
+</div>
+</main>
+
+  </body>
+</html>
